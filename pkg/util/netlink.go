@@ -113,7 +113,7 @@ func isSuitableMacvtapParent(link netlink.Link) bool {
 	}
 
 	switch link.(type) {
-	case *netlink.Bond, *netlink.Device:
+	case *netlink.Bond, *netlink.Device, *netlink.Vlan:
 	default:
 		return false
 	}
